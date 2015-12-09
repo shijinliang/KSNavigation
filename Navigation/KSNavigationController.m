@@ -22,10 +22,14 @@
     [self setupNavigationBar];
 }
 
+//设置导航栏主题
 - (void)setupNavigationBar
 {
     UINavigationBar *appearance = [UINavigationBar appearance];
+    //统一设置导航栏颜色，如果单个界面需要设置，可以在viewWillAppear里面设置，在viewWillDisappear设置回统一格式。
     [appearance setBarTintColor:[UIColor getColor:@"fb9c0a"]];
+    
+    //导航栏title格式
     NSMutableDictionary *textAttribute = [NSMutableDictionary dictionary];
     textAttribute[NSForegroundColorAttributeName] = [UIColor whiteColor];
     textAttribute[NSFontAttributeName] = [UIFont systemFontOfSize:15];
