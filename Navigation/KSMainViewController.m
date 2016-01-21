@@ -21,6 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"KSMainView";
+    
+    UIBarButtonItem *itemBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"gengduo"] style:UIBarButtonItemStylePlain target:self action:@selector(clickMore)];
+    self.navigationItem.leftBarButtonItem = itemBar;
+    
     [self.view addSubview:self.firstBtn];
     [self.view addSubview:self.secondBtn];
 }
@@ -28,6 +32,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)clickMore
+{
+    NSLog(@"more");
 }
 
 #pragma mark - 懒加载
